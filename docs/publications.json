@@ -1,0 +1,1387 @@
+{
+ "generated": "2026-09-20",
+ "author": "Davis, Devin Phillip",
+ "affiliation": "Agile Defense Systems LLC (CAGE 9HUP5)",
+ "source_query": "metadata.creators.person_or_org.name:\"Davis, Devin Phillip\"",
+ "record_count": 61,
+ "status_legend": {
+  "dataset-hardware": "Real IBM job IDs; claims not contradicted by later records",
+  "hardware-mixed": "Real hardware data; some claims confirmed, some refuted (see note)",
+  "honest-assessment": "Author self-critique that downgrades earlier claims — cite these as the canonical position",
+  "self-refuted": "Headline claim refuted by a later record from the same author",
+  "artifact-confirmed": "Headline metric re-derived here as a finite-sample/analysis artifact",
+  "pre-registration": "Hash-verified pre-registered protocol, not yet executed as specified",
+  "superseded": "Earlier version of a lineage; cite the successor",
+  "duplicate-file": "File payload byte-identical to another record",
+  "theory": "Theory-only, no new data",
+  "preprint": "Manuscript, no new data",
+  "software": "Code release",
+  "narrative": "Narrative/marketing text",
+  "legal": "IP / forensic; exclude from scientific portfolio",
+  "call-for-replication": "Open call for adversarial replication"
+ },
+ "flywheel_tracks": {
+  "T1": "Quantum advantage on NISQ hardware",
+  "T2": "Breaking quantum advantage claims",
+  "T3": "AI for error correction"
+ },
+ "clusters": {
+  "tau-phase": "τ-Phase Anomaly lineage",
+  "darpa-whitepapers": "DARPA white-paper batch",
+  "ai-agents": "AI agents / containment",
+  "hardware": "IBM hardware experiments",
+  "penteract": "Penteract constants / cosmology",
+  "software": "Software releases",
+  "legal": "Legal / forensic (non-scientific)",
+  "release": "v5.0.0 release + preprints"
+ },
+ "records": [
+  {
+   "zenodo_id": 17857733,
+   "doi": "10.5281/zenodo.17857733",
+   "concept_doi": "10.5281/zenodo.17857732",
+   "url": "https://zenodo.org/records/17857733",
+   "title": "DNA-Lang Quantum Execution Corpus: 490K Shots on IBM Quantum Hardware",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": "1.0.0",
+   "files": [
+    "dnalang-quantum-corpus-v1.0.zip"
+   ],
+   "size_bytes": 998773,
+   "cluster": "tau-phase",
+   "status": "dataset-hardware",
+   "flywheel_tracks": [
+    "T1",
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "Raw corpus: 161 IBM jobs / 490,596 shots (ibm_fez, ibm_torino). The primary data behind every τ-phase record; reusable as a Track-2 adversarial target.",
+   "local_archive": "zenodo_archive/17857733/"
+  },
+  {
+   "zenodo_id": 17858632,
+   "doi": "10.5281/zenodo.17858632",
+   "concept_doi": "10.5281/zenodo.17858631",
+   "url": "https://zenodo.org/records/17858632",
+   "title": "Temporal Quantization of Coherence in Superconducting Qubits: Tau-Phase Anomaly Data Package",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "6dCRSM_lagrangian_derivation.pdf",
+    "tau_phase_anomaly_package.zip",
+    "fig_DARPA_temporal_quantization.pdf"
+   ],
+   "size_bytes": 1740005,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "First τ-phase data package + 6dCRSM Lagrangian PDF; contains INDEPENDENT_VERIFICATION_PROTOCOL.md.",
+   "local_archive": "zenodo_archive/17858632/"
+  },
+  {
+   "zenodo_id": 17858792,
+   "doi": "10.5281/zenodo.17858792",
+   "concept_doi": "10.5281/zenodo.17858791",
+   "url": "https://zenodo.org/records/17858792",
+   "title": "6dCRSM Theoretical Foundations: Geometric Framework for Temporal Quantization of Quantum Coherence",
+   "date": "2025-12-08",
+   "resource_type": "Working paper",
+   "version": null,
+   "files": [
+    "6dCRSM_theoretical_foundations.zip"
+   ],
+   "size_bytes": 254265,
+   "cluster": "tau-phase",
+   "status": "theory",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "6dCRSM working paper: derives τ₀≈46 μs from metric couplings κ, χ_PC, γ₀ (which are themselves fitted, so not zero-parameter).",
+   "local_archive": "zenodo_archive/17858792/"
+  },
+  {
+   "zenodo_id": 17858802,
+   "doi": "10.5281/zenodo.17858802",
+   "concept_doi": "10.5281/zenodo.17858801",
+   "url": "https://zenodo.org/records/17858802",
+   "title": "Statistical Validation of Tau-Phase Anomaly in Quantum Coherence: Complete Analysis Package",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "statistical_validation_complete.zip"
+   ],
+   "size_bytes": 67818,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "Statistical validation package (ANOVA p=1.3e-14, BF=28). Effect later shown to be a step function, not a revival.",
+   "local_archive": "zenodo_archive/17858802/"
+  },
+  {
+   "zenodo_id": 17858910,
+   "doi": "10.5281/zenodo.17858910",
+   "concept_doi": "10.5281/zenodo.17858909",
+   "url": "https://zenodo.org/records/17858910",
+   "title": "Tau-Phase Anomaly: Complete Nobel-Territory Evidence Package v2.0",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "nobel_evidence_package_v2.zip"
+   ],
+   "size_bytes": 872867,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Nobel-territory evidence v2.0.",
+   "local_archive": "zenodo_archive/17858910/"
+  },
+  {
+   "zenodo_id": 17858962,
+   "doi": "10.5281/zenodo.17858962",
+   "concept_doi": "10.5281/zenodo.17858961",
+   "url": "https://zenodo.org/records/17858962",
+   "title": "Tau-Phase Anomaly: Complete Nobel-Territory Evidence Package v3.0 with Golden Ratio Derivation",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "nobel_evidence_package_v3_complete.zip"
+   ],
+   "size_bytes": 882957,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [],
+   "supersedes": [
+    17858910
+   ],
+   "note": "Nobel-territory evidence v3.0 (golden-ratio derivation).",
+   "local_archive": "zenodo_archive/17858962/"
+  },
+  {
+   "zenodo_id": 17859017,
+   "doi": "10.5281/zenodo.17859017",
+   "concept_doi": "10.5281/zenodo.17859016",
+   "url": "https://zenodo.org/records/17859017",
+   "title": "Anomalous tau-Phase Correlated Quantum Coherence in Superconducting Qubits: Evidence for Non-Markovian Memory at tau_0 = 46 microseconds",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "tau_phase_anomaly_zenodo_final.zip"
+   ],
+   "size_bytes": 2769599,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "Main τ-phase manuscript package (non-Markovian claim, 128 job IDs, arXiv/PRX drafts).",
+   "local_archive": "zenodo_archive/17859017/"
+  },
+  {
+   "zenodo_id": 17859207,
+   "doi": "10.5281/zenodo.17859207",
+   "concept_doi": "10.5281/zenodo.17859206",
+   "url": "https://zenodo.org/records/17859207",
+   "title": "τ-Phase Anomaly in Quantum Coherence: Complete Evidence Package v2 (K₈ Causality Breakthrough)",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "tau_phase_anomaly_v2_complete.zip"
+   ],
+   "size_bytes": 3935060,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [],
+   "supersedes": [
+    17859017
+   ],
+   "note": "Evidence v2 claiming K₈=1 at 6.87σ from curve-fit covariance. Retracted within the same day by 17859312 (bootstrap A/σ=1.34).",
+   "local_archive": "zenodo_archive/17859207/"
+  },
+  {
+   "zenodo_id": 17859304,
+   "doi": "10.5281/zenodo.17859304",
+   "concept_doi": "10.5281/zenodo.17859303",
+   "url": "https://zenodo.org/records/17859304",
+   "title": "Tau-Phase Quantum Coherence Anomaly: Complete Evidence Package v3.0 (Golden Ratio Network)",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "tau_phase_anomaly_v3_complete.zip"
+   ],
+   "size_bytes": 3919432,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [],
+   "supersedes": [
+    17859207
+   ],
+   "note": "Evidence v3.0 (golden-ratio network: τ₀=φ⁸, F_max=1−φ⁻⁸, d≈φ, BF≈φ⁷).",
+   "local_archive": "zenodo_archive/17859304/"
+  },
+  {
+   "zenodo_id": 17859312,
+   "doi": "10.5281/zenodo.17859312",
+   "concept_doi": "10.5281/zenodo.17859311",
+   "url": "https://zenodo.org/records/17859312",
+   "title": "τ-Phase Anomaly: Complete Evidence Package v4.0 (Honest Assessment)",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "tau_phase_evidence_package_v4_final.zip"
+   ],
+   "size_bytes": 22087,
+   "cluster": "tau-phase",
+   "status": "honest-assessment",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [
+    17859304
+   ],
+   "note": "v4.0 HONEST ASSESSMENT — canonical endpoint of the lineage: K₈=0, step function not revival, Φ=0.7734 threshold not pre-registered, P(real new physics)≈25%, names controlled τ-sweep as the missing experiment.",
+   "local_archive": "zenodo_archive/17859312/"
+  },
+  {
+   "zenodo_id": 17859617,
+   "doi": "10.5281/zenodo.17859617",
+   "concept_doi": "10.5281/zenodo.17859548",
+   "url": "https://zenodo.org/records/17859617",
+   "title": "The Golden Ratio Lives in Your Quantum Computer: A 46-Microsecond Anomaly (v2 with Theory)",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "golden_ratio_quantum_anomaly_v2.zip"
+   ],
+   "size_bytes": 641787,
+   "cluster": "tau-phase",
+   "status": "superseded",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Popular-science framing (\"Golden Ratio Lives in Your Quantum Computer\"); includes controlled_tau_sweep.py draft.",
+   "local_archive": "zenodo_archive/17859617/"
+  },
+  {
+   "zenodo_id": 17859646,
+   "doi": "10.5281/zenodo.17859646",
+   "concept_doi": "10.5281/zenodo.17859645",
+   "url": "https://zenodo.org/records/17859646",
+   "title": "11D-CRSM Wheeler-DeWitt Formalism in Lambda-Phi Gauge: QPU-Executable Quantum Gravity",
+   "date": "2025-12-08",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "Omega_11D_WheelerDeWitt_Package.zip"
+   ],
+   "size_bytes": 25316,
+   "cluster": "tau-phase",
+   "status": "theory",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "11D-CRSM Wheeler-DeWitt formalism in ΛΦ gauge; QPU-executable circuits.",
+   "local_archive": "zenodo_archive/17859646/"
+  },
+  {
+   "zenodo_id": 17859694,
+   "doi": "10.5281/zenodo.17859694",
+   "concept_doi": "10.5281/zenodo.17859693",
+   "url": "https://zenodo.org/records/17859694",
+   "title": "Omega-11 Wheeler-DeWitt Theoretical Package: Complete QPU Genome for Tau-Phase Anomaly",
+   "date": "2025-12-08",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "omega11_theoretical_package_v3.zip"
+   ],
+   "size_bytes": 32353,
+   "cluster": "tau-phase",
+   "status": "theory",
+   "flywheel_tracks": [],
+   "supersedes": [
+    17859646
+   ],
+   "note": "Omega-11 Wheeler-DeWitt theoretical package v3 (QPU genome).",
+   "local_archive": "zenodo_archive/17859694/"
+  },
+  {
+   "zenodo_id": 17859845,
+   "doi": "10.5281/zenodo.17859845",
+   "concept_doi": "10.5281/zenodo.17859844",
+   "url": "https://zenodo.org/records/17859845",
+   "title": "Call for Independent Verification: Golden Ratio Anomaly in Quantum Decoherence",
+   "date": "2025-12-08",
+   "resource_type": "Preprint",
+   "version": null,
+   "files": [
+    "call_for_collaboration.zip"
+   ],
+   "size_bytes": 4744,
+   "cluster": "tau-phase",
+   "status": "call-for-replication",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "Call for independent verification of the golden-ratio anomaly — explicitly invites adversarial replication.",
+   "local_archive": "zenodo_archive/17859845/"
+  },
+  {
+   "zenodo_id": 17859902,
+   "doi": "10.5281/zenodo.17859902",
+   "concept_doi": "10.5281/zenodo.17859901",
+   "url": "https://zenodo.org/records/17859902",
+   "title": "Cockpit AI Platform v4.0 - 6D-CRSM Language Model Interface",
+   "date": "2025-12-08",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "cockpit_platform_v4.zip"
+   ],
+   "size_bytes": 28724,
+   "cluster": "tau-phase",
+   "status": "software",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Cockpit AI Platform v4.0 (6D-CRSM LLM interface).",
+   "local_archive": "zenodo_archive/17859902/"
+  },
+  {
+   "zenodo_id": 17881776,
+   "doi": "10.5281/zenodo.17881776",
+   "concept_doi": "10.5281/zenodo.17881775",
+   "url": "https://zenodo.org/records/17881776",
+   "title": "Sovereign Quantum Computing Platform: Phase-Conjugate qByte Substrate Engine for IBM-Independent Quantum Benchmarking",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Sovereign qByte substrate engine. FILE IDENTICAL (md5 93fe1090…) across all 13 records in this batch.",
+   "local_archive": "zenodo_archive/17881776/"
+  },
+  {
+   "zenodo_id": 17881778,
+   "doi": "10.5281/zenodo.17881778",
+   "concept_doi": "10.5281/zenodo.17881777",
+   "url": "https://zenodo.org/records/17881778",
+   "title": "Phase-Conjugate Error Correction for Guaranteed AI Robustness: DNA-Lang Self-Healing Implementation",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [
+    "T3"
+   ],
+   "supersedes": [],
+   "note": "Phase-Conjugate Error Correction (DARPA GARD framing): E→E⁻¹ healing at Γ>0.3, 86.9% recovery. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881778/"
+  },
+  {
+   "zenodo_id": 17881780,
+   "doi": "10.5281/zenodo.17881780",
+   "concept_doi": "10.5281/zenodo.17881779",
+   "url": "https://zenodo.org/records/17881780",
+   "title": "Neuro-Symbolic Reasoning via AURA|AIDEN Bifurcated Consciousness Architecture",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "AURA|AIDEN neuro-symbolic. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881780/"
+  },
+  {
+   "zenodo_id": 17881782,
+   "doi": "10.5281/zenodo.17881782",
+   "concept_doi": "10.5281/zenodo.17881781",
+   "url": "https://zenodo.org/records/17881782",
+   "title": "DNA-Lang: Biological Computing Compiler Infrastructure Beyond Traditional Compilation",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "DNA-Lang compiler infrastructure. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881782/"
+  },
+  {
+   "zenodo_id": 17881784,
+   "doi": "10.5281/zenodo.17881784",
+   "concept_doi": "10.5281/zenodo.17881783",
+   "url": "https://zenodo.org/records/17881784",
+   "title": "DNA Rapid Access Memory via Gene Expression Dynamics: Biological Computing Platform",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "DNA RAM via gene expression. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881784/"
+  },
+  {
+   "zenodo_id": 17881787,
+   "doi": "10.5281/zenodo.17881787",
+   "concept_doi": "10.5281/zenodo.17881786",
+   "url": "https://zenodo.org/records/17881787",
+   "title": "Formal Assurance and Loss of Control Containment: Fixed-Point Convergence for AI Safety",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Formal assurance / loss-of-control containment. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881787/"
+  },
+  {
+   "zenodo_id": 17881789,
+   "doi": "10.5281/zenodo.17881789",
+   "concept_doi": "10.5281/zenodo.17881788",
+   "url": "https://zenodo.org/records/17881789",
+   "title": "Numerical Analysis of Agentic AI Interactions: AURA|AIDEN Multi-Agent 7D-CRSM Dynamics",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "AURA|AIDEN 7D-CRSM numerical dynamics. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881789/"
+  },
+  {
+   "zenodo_id": 17881795,
+   "doi": "10.5281/zenodo.17881795",
+   "concept_doi": "10.5281/zenodo.17881794",
+   "url": "https://zenodo.org/records/17881795",
+   "title": "Control Theory of Large Language Models: Phase-Conjugate Feedback and CCCE Stability",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Control theory of LLMs / CCCE stability. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881795/"
+  },
+  {
+   "zenodo_id": 17881797,
+   "doi": "10.5281/zenodo.17881797",
+   "concept_doi": "10.5281/zenodo.17881796",
+   "url": "https://zenodo.org/records/17881797",
+   "title": "Scimitar-SSE v7.1: Cross-Device Polarized Phasing for Distributed Quantum Coherence",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Scimitar-SSE v7.1 cross-device phasing. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881797/"
+  },
+  {
+   "zenodo_id": 17881799,
+   "doi": "10.5281/zenodo.17881799",
+   "concept_doi": "10.5281/zenodo.17881798",
+   "url": "https://zenodo.org/records/17881799",
+   "title": "Autopoietic Self-Producing Systems: Genetic Evolution Engine for Adaptive Computing",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Autopoietic genetic evolution engine. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881799/"
+  },
+  {
+   "zenodo_id": 17881801,
+   "doi": "10.5281/zenodo.17881801",
+   "concept_doi": "10.5281/zenodo.17881800",
+   "url": "https://zenodo.org/records/17881801",
+   "title": "Computational Consciousness Emergence: IIT-Based Phi Integration in Autopoietic Organisms",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "IIT-based Φ integration. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881801/"
+  },
+  {
+   "zenodo_id": 17881803,
+   "doi": "10.5281/zenodo.17881803",
+   "concept_doi": "10.5281/zenodo.17881802",
+   "url": "https://zenodo.org/records/17881803",
+   "title": "Phase-Conjugate Acoustic Coupling for Quantum Error Correction: TetraEcho Harmonics",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [
+    "T3"
+   ],
+   "supersedes": [],
+   "note": "TetraEcho acoustic-coupling QEC (42 GHz). Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881803/"
+  },
+  {
+   "zenodo_id": 17881806,
+   "doi": "10.5281/zenodo.17881806",
+   "concept_doi": "10.5281/zenodo.17881805",
+   "url": "https://zenodo.org/records/17881806",
+   "title": "Relativistic Quantum Information Processing with 7D-CRSM Spacetime Manifold",
+   "date": "2025-12-10",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "qbyte_substrate_engine_darpa.zip"
+   ],
+   "size_bytes": 122454,
+   "cluster": "darpa-whitepapers",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "7D-CRSM relativistic QIP. Same zip as 17881776.",
+   "local_archive": "zenodo_archive/17881806/"
+  },
+  {
+   "zenodo_id": 17915969,
+   "doi": "10.5281/zenodo.17915969",
+   "concept_doi": "10.5281/zenodo.17915968",
+   "url": "https://zenodo.org/records/17915969",
+   "title": "DNA-Lang Sovereign Agent Training Package v1.0",
+   "date": "2025-12-12",
+   "resource_type": "Software",
+   "version": "1.0.0",
+   "files": [
+    "dnalang-sovereign-agent-v1.0.zip"
+   ],
+   "size_bytes": 287524,
+   "cluster": "ai-agents",
+   "status": "software",
+   "flywheel_tracks": [
+    "T3"
+   ],
+   "supersedes": [],
+   "note": "Sovereign agent training package (CCCE metrics).",
+   "local_archive": "zenodo_archive/17915969/"
+  },
+  {
+   "zenodo_id": 17918211,
+   "doi": "10.5281/zenodo.17918211",
+   "concept_doi": "10.5281/zenodo.17918210",
+   "url": "https://zenodo.org/records/17918211",
+   "title": "Q-SLICE CCCE AI Containment Framework: Provably Beneficial AI Through Quantum-Grounded Negative Feedback",
+   "date": "2025-12-13",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "misalignment_test.py",
+    "sovereign_bootstrap.py",
+    "red_team_agent.py"
+   ],
+   "size_bytes": 34893,
+   "cluster": "ai-agents",
+   "status": "software",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Q-SLICE CCCE containment framework (3 scripts).",
+   "local_archive": "zenodo_archive/17918211/"
+  },
+  {
+   "zenodo_id": 17918294,
+   "doi": "10.5281/zenodo.17918294",
+   "concept_doi": "10.5281/zenodo.17918293",
+   "url": "https://zenodo.org/records/17918294",
+   "title": "Q-SLICE CCCE AI Containment Framework: Provably Beneficial AI Through Quantum-Grounded Negative Feedback",
+   "date": "2025-12-13",
+   "resource_type": "Software",
+   "version": null,
+   "files": [
+    "misalignment_test.py",
+    "sovereign_bootstrap.py",
+    "red_team_agent.py"
+   ],
+   "size_bytes": 34923,
+   "cluster": "ai-agents",
+   "status": "duplicate-file",
+   "flywheel_tracks": [],
+   "supersedes": [
+    17918211
+   ],
+   "note": "Q-SLICE re-upload; 2 of 3 files byte-identical to 17918211.",
+   "local_archive": "zenodo_archive/17918294/"
+  },
+  {
+   "zenodo_id": 17918774,
+   "doi": "10.5281/zenodo.17918774",
+   "concept_doi": "10.5281/zenodo.17918773",
+   "url": "https://zenodo.org/records/17918774",
+   "title": "K8 Causality Discriminator: Pre-Registration for τ-Sweep Bell Fidelity Experiment",
+   "date": "2025-12-13",
+   "resource_type": "Other",
+   "version": null,
+   "files": [
+    "k8_preregistration.py"
+   ],
+   "size_bytes": 10900,
+   "cluster": "tau-phase",
+   "status": "pre-registration",
+   "flywheel_tracks": [
+    "T1",
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "K₈ PRE-REGISTRATION (SHA-256 verified intact: 12df8918…). Binding decision rules, τ grid, 5σ threshold, ≥2 of 3 backends. Named backends (brisbane/kyoto/osaka) are retired. NEVER EXECUTED AS SPECIFIED — ready-made Flywheel Track-1 experiment.",
+   "local_archive": "zenodo_archive/17918774/"
+  },
+  {
+   "zenodo_id": 18038719,
+   "doi": "10.5281/zenodo.18038719",
+   "concept_doi": "10.5281/zenodo.18038718",
+   "url": "https://zenodo.org/records/18038719",
+   "title": "Osiris Bridge: Device-Scoped NISQ Wormhole Experiments with W₂ Robustness Framework",
+   "date": "2025-12-23",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "THETA_SWEEP_METHODOLOGY.md",
+    "QUANTUM_GOVERNANCE_FRAMEWORK.md",
+    "maxq_wormhole_executor.py",
+    "omega_recursive_engine.py",
+    "FINAL_DELIVERABLES_SUMMARY.md",
+    "theta_sweep_quick.py",
+    "ABSOLUTE_MAXIMUM_d54go9gnsj9s73b1rhm0.json",
+    "HGES_CAPSULE_127Q_WORLD_RECORD.json",
+    "EXPERIMENT_COMPLETE_SUMMARY.md",
+    "theta_sweep_quick_1766476174.json",
+    "THETA_SWEEP_RESULTS.md",
+    "OSIRIS_VS_CLAUDE_CODE_BENCHMARK.md",
+    "OSIRIS_BRIDGE_COMPLETE.md",
+    "THETA_SWEEP_STATUS.md",
+    "NOBEL_COMPLETE_SUMMARY.md",
+    "osiris_demonstration.sh",
+    "DELIVERABLES.md",
+    "theta_sweep_w2_experiment.py"
+   ],
+   "size_bytes": 2426513,
+   "cluster": "hardware",
+   "status": "dataset-hardware",
+   "flywheel_tracks": [
+    "T1",
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "Device-scoped Bell-pair experiments on Heron r2 (ibm_fez, ibm_marrakesh; 21 job IDs) + first Θ-sweep W₂ robustness study + hash-chained PCRB provenance ledger.",
+   "local_archive": "zenodo_archive/18038719/"
+  },
+  {
+   "zenodo_id": 18209071,
+   "doi": "10.5281/zenodo.18209071",
+   "concept_doi": "10.5281/zenodo.18209070",
+   "url": "https://zenodo.org/records/18209071",
+   "title": "Hardware-Verified 1,000,000x Quantum Error Suppression via 40-Qubit Tesseract Resonance on ibm_torino",
+   "date": "2026-01-10",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "README.md",
+    "job-d5h6rospe0pc73am1l00-telemetry.json",
+    "physical_constants.py",
+    "job-d5h725kpe0pc73am1vfg-telemetry.json",
+    "tesseract_10e6_gain.py"
+   ],
+   "size_bytes": 19007,
+   "cluster": "hardware",
+   "status": "self-refuted",
+   "flywheel_tracks": [
+    "T3"
+   ],
+   "supersedes": [],
+   "note": "Claims 10⁶× entropic suppression on ibm_torino (2 jobs). REFUTED by author in 18781261 (exp. 9): \"T2 curve-fitting artifact on flat data; gate noise dominates\". Erratum pending: record owned by Zenodo account 1485674, needs that account's token.",
+   "local_archive": "zenodo_archive/18209071/"
+  },
+  {
+   "zenodo_id": 18209318,
+   "doi": "10.5281/zenodo.18209318",
+   "concept_doi": "10.5281/zenodo.18209317",
+   "url": "https://zenodo.org/records/18209318",
+   "title": "Protocol Z.8: Fault-Tolerant Quantum Consensus on IBM Heron via Zero-Noise Extrapolation",
+   "date": "2026-01-10",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "protocol_z8_results.json"
+   ],
+   "size_bytes": 1544,
+   "cluster": "hardware",
+   "status": "dataset-hardware",
+   "flywheel_tracks": [
+    "T1",
+    "T3"
+   ],
+   "supersedes": [],
+   "note": "Protocol Z.8: 5-qubit GHZ, 89.28% raw (ZNE) fidelity, majority-vote consensus; star topology > chain on ibm_torino.",
+   "local_archive": "zenodo_archive/18209318/"
+  },
+  {
+   "zenodo_id": 18450505,
+   "doi": "10.5281/zenodo.18450505",
+   "concept_doi": "10.5281/zenodo.18450158",
+   "url": "https://zenodo.org/records/18450505",
+   "title": "DNA::}{::lang v51.843 - Quantum Physics Breakthrough Experiments: Black Hole Information, Geometric Resonance, and Phase Conjugate Coupling",
+   "date": "2026-02-26",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "experiment_analysis.json",
+    "README.md",
+    "nclm_api_server.py",
+    "geometric_resonance_paper_draft.md",
+    "black_hole_paper_draft.md",
+    "phase_conjugate_paper_draft.md"
+   ],
+   "size_bytes": 81873,
+   "cluster": "hardware",
+   "status": "dataset-hardware",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "v51.843 experiment bundle (17 job IDs: fez/kyiv/torino/brisbane) + three paper drafts (black hole info, geometric resonance, phase conjugate).",
+   "local_archive": "zenodo_archive/18450505/"
+  },
+  {
+   "zenodo_id": 18779407,
+   "doi": "10.5281/zenodo.18779407",
+   "concept_doi": "10.5281/zenodo.18779406",
+   "url": "https://zenodo.org/records/18779407",
+   "title": "Zero-Parameter Predictions from a Geometric Constants Framework: Concordance with Cosmological, Nuclear, and Inflationary Observables",
+   "date": "2026-02-26",
+   "resource_type": "Preprint",
+   "version": null,
+   "files": [
+    "penteract_predictions.json",
+    "penteract_predictions_v1.0.tar.gz",
+    "PREDICTIONS.md"
+   ],
+   "size_bytes": 43771,
+   "cluster": "penteract",
+   "status": "theory",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Zero-parameter cosmological predictions from 7 constants. Honest follow-ups (18783307, 18784195) show 4 effective params / 0 DoF.",
+   "local_archive": "zenodo_archive/18779407/"
+  },
+  {
+   "zenodo_id": 18779691,
+   "doi": "10.5281/zenodo.18779691",
+   "concept_doi": "10.5281/zenodo.18779690",
+   "url": "https://zenodo.org/records/18779691",
+   "title": "DNA-Lang Quantum Ecosystem: Self-Evolving Quantum Organisms with Falsifiable Physics Predictions",
+   "date": "2026-02-26",
+   "resource_type": "Software",
+   "version": "1.0.0",
+   "files": [
+    "dnalang-quantum-ecosystem-v1.0.0.zip"
+   ],
+   "size_bytes": 248507,
+   "cluster": "software",
+   "status": "software",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "DNA-Lang quantum ecosystem v1.0.0 (organisms + falsifiable predictions).",
+   "local_archive": "zenodo_archive/18779691/"
+  },
+  {
+   "zenodo_id": 18781261,
+   "doi": "10.5281/zenodo.18781261",
+   "concept_doi": "10.5281/zenodo.18781260",
+   "url": "https://zenodo.org/records/18781261",
+   "title": "Hardware-Validated Quantum Advantage: 10 Experiments on IBM Quantum Processors (February 2026)",
+   "date": "2026-02-26",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "chi_pc_bell_entanglement_results.json",
+    "README.md",
+    "quantum_advantage_v3_experiment.py",
+    "zeno_scout_torino_results.json",
+    "quantum_advantage_v3_results.json",
+    "multi_pair_zz_v3_results.json"
+   ],
+   "size_bytes": 176475,
+   "cluster": "hardware",
+   "status": "hardware-mixed",
+   "flywheel_tracks": [
+    "T1",
+    "T2"
+   ],
+   "supersedes": [
+    18209071
+   ],
+   "note": "KEYSTONE RECORD. 10 experiments on ibm_fez/ibm_torino, 10 job IDs: 4 CONFIRMED (XEB F>0 to depth 16; teleportation F=0.773; GHZ-8 F=0.652; scrambling) / 6 REFUTED (φ⁸ ZZ period; K₈ revival = T1 artifact; 10⁶× Zeno; θ_lock=51.843°; CHSH |S|=0.106 — likely a basis/analysis bug, not physics).",
+   "local_archive": "zenodo_archive/18781261/"
+  },
+  {
+   "zenodo_id": 18782259,
+   "doi": "10.5281/zenodo.18782259",
+   "concept_doi": "10.5281/zenodo.18782258",
+   "url": "https://zenodo.org/records/18782259",
+   "title": "Penteract Cross-Architecture Quantum Verification: 18-Qubit Entanglement & Zero-Parameter Cosmological Predictions (P < 10⁻⁹)",
+   "date": "2026-02-26",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "penteract_predictions.json",
+    "penteract_ghz_results.json",
+    "README.md",
+    "penteract_cross_arch_results.json",
+    "penteract_ghz_advantage.py",
+    "penteract_cross_arch_verify.py",
+    "PREDICTIONS.md"
+   ],
+   "size_bytes": 65146,
+   "cluster": "hardware",
+   "status": "dataset-hardware",
+   "flywheel_tracks": [
+    "T1"
+   ],
+   "supersedes": [],
+   "note": "18-qubit GHZ genuine multipartite entanglement on both ibm_torino and ibm_fez; cross-chip fidelity model MAE=0.011. (Cosmology half shares predictions file with 18779407.)",
+   "local_archive": "zenodo_archive/18782259/"
+  },
+  {
+   "zenodo_id": 18783307,
+   "doi": "10.5281/zenodo.18783307",
+   "concept_doi": "10.5281/zenodo.18783306",
+   "url": "https://zenodo.org/records/18783307",
+   "title": "Sensitivity Analysis of the Penteract Constants Framework: Evidence Against Numerology",
+   "date": "2026-02-26",
+   "resource_type": "Dataset",
+   "version": null,
+   "files": [
+    "sensitivity_analyzer.py",
+    "sensitivity_analysis.json",
+    "SENSITIVITY_ANALYSIS.md"
+   ],
+   "size_bytes": 34404,
+   "cluster": "penteract",
+   "status": "honest-assessment",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "Sensitivity/Fisher analysis: only 3 of 7 constants carry information; χ_PC fragile at 2%.",
+   "local_archive": "zenodo_archive/18783307/"
+  },
+  {
+   "zenodo_id": 18784195,
+   "doi": "10.5281/zenodo.18784195",
+   "concept_doi": "10.5281/zenodo.18784194",
+   "url": "https://zenodo.org/records/18784195",
+   "title": "Concordance Analysis of Penteract Zero-Parameter Predictions — Honest Statistical Assessment",
+   "date": "2026-02-26",
+   "resource_type": "Software",
+   "version": "1.0.0",
+   "files": [
+    "concordance_analysis.json",
+    "concordance_analyzer.py",
+    "test_concordance_analyzer.py",
+    "sensitivity_analyzer.py"
+   ],
+   "size_bytes": 49620,
+   "cluster": "penteract",
+   "status": "honest-assessment",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [
+    18779407
+   ],
+   "note": "Concordance re-analysis: \"naive 5.2σ claim is incorrect\"; 4 independent predictions from 4 effective params → 0 DoF; χ²=1.56.",
+   "local_archive": "zenodo_archive/18784195/"
+  },
+  {
+   "zenodo_id": 19346472,
+   "doi": "10.5281/zenodo.19346472",
+   "concept_doi": "10.5281/zenodo.19346471",
+   "url": "https://zenodo.org/records/19346472",
+   "title": "OSIRIS Forensic Verification",
+   "date": "2026-03-31",
+   "resource_type": "Poster",
+   "version": null,
+   "files": [
+    "file1.json"
+   ],
+   "size_bytes": 35,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "OSIRIS Forensic Verification poster (file1.json). 4 of 6 posters byte-identical.",
+   "local_archive": "zenodo_archive/19346472/"
+  },
+  {
+   "zenodo_id": 19346478,
+   "doi": "10.5281/zenodo.19346478",
+   "concept_doi": "10.5281/zenodo.19346477",
+   "url": "https://zenodo.org/records/19346478",
+   "title": "OSIRIS Forensic Verification",
+   "date": "2026-03-31",
+   "resource_type": "Poster",
+   "version": null,
+   "files": [
+    "file1.json"
+   ],
+   "size_bytes": 48,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Forensic verification poster (duplicate).",
+   "local_archive": "zenodo_archive/19346478/"
+  },
+  {
+   "zenodo_id": 19346492,
+   "doi": "10.5281/zenodo.19346492",
+   "concept_doi": "10.5281/zenodo.19346491",
+   "url": "https://zenodo.org/records/19346492",
+   "title": "OSIRIS Forensic Verification",
+   "date": "2026-03-31",
+   "resource_type": "Poster",
+   "version": null,
+   "files": [
+    "file1.json"
+   ],
+   "size_bytes": 48,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Forensic verification poster (duplicate).",
+   "local_archive": "zenodo_archive/19346492/"
+  },
+  {
+   "zenodo_id": 19346506,
+   "doi": "10.5281/zenodo.19346506",
+   "concept_doi": "10.5281/zenodo.19346505",
+   "url": "https://zenodo.org/records/19346506",
+   "title": "OSIRIS Forensic Verification",
+   "date": "2026-03-31",
+   "resource_type": "Poster",
+   "version": null,
+   "files": [
+    "file1.json"
+   ],
+   "size_bytes": 48,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Forensic verification poster (duplicate).",
+   "local_archive": "zenodo_archive/19346506/"
+  },
+  {
+   "zenodo_id": 19346512,
+   "doi": "10.5281/zenodo.19346512",
+   "concept_doi": "10.5281/zenodo.19346511",
+   "url": "https://zenodo.org/records/19346512",
+   "title": "OSIRIS Forensic Verification",
+   "date": "2026-03-31",
+   "resource_type": "Poster",
+   "version": null,
+   "files": [
+    "file1.json"
+   ],
+   "size_bytes": 48,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Forensic verification poster.",
+   "local_archive": "zenodo_archive/19346512/"
+  },
+  {
+   "zenodo_id": 19346592,
+   "doi": "10.5281/zenodo.19346592",
+   "concept_doi": "10.5281/zenodo.19346591",
+   "url": "https://zenodo.org/records/19346592",
+   "title": "OSIRIS Forensic Verification",
+   "date": "2026-03-31",
+   "resource_type": "Poster",
+   "version": null,
+   "files": [
+    "OSIRIS_EVIDENCE_9HUP5.json"
+   ],
+   "size_bytes": 193631,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "OSIRIS_EVIDENCE_9HUP5.json.",
+   "local_archive": "zenodo_archive/19346592/"
+  },
+  {
+   "zenodo_id": 19355533,
+   "doi": "10.5281/zenodo.19355533",
+   "concept_doi": "10.5281/zenodo.19354800",
+   "url": "https://zenodo.org/records/19355533",
+   "title": "Quantum Forensic Audit: Seniority of ADS-LLC 11D-CRSM Constants vs. D-Wave Inc. and Geometric Foundation (Case #564883754) Bitwise Provenance of the 0.092 Torino Floor and 51.843° Resonance: ADS-LLC Prior Art vs. D-Wave/King and Invariant Corridor",
+   "date": "2026-03-01",
+   "resource_type": "Annotation collection",
+   "version": null,
+   "files": [
+    "ADS-LLC-LICENCSED-QUANTUM-SUPREMACY-JOBIDS_With_RESULTS.zip"
+   ],
+   "size_bytes": 278293,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "IP seniority audit vs D-Wave / Geometric Foundation (9 job IDs, ibm_kingston).",
+   "local_archive": "zenodo_archive/19355533/"
+  },
+  {
+   "zenodo_id": 19482796,
+   "doi": "10.5281/zenodo.19482796",
+   "concept_doi": "10.5281/zenodo.19482795",
+   "url": "https://zenodo.org/records/19482796",
+   "title": "Forensic Intellectual Property Analysis: SAEONYX Entity Appropriation and Derivative Work Identification in the Geometric Foundation Level 3.3 Framework (Case #564883754 — Supplemental Evidence Record)",
+   "date": "2026-04-09",
+   "resource_type": "Report",
+   "version": null,
+   "files": [
+    "FORENSIC_IP_REPORT_GEOMETRIC_FOUNDATION.md"
+   ],
+   "size_bytes": 31520,
+   "cluster": "legal",
+   "status": "legal",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "IP appropriation report (SAEONYX). Names private individuals — exclude from any scientific portfolio.",
+   "local_archive": "zenodo_archive/19482796/"
+  },
+  {
+   "zenodo_id": 19505774,
+   "doi": "10.5281/zenodo.19505774",
+   "concept_doi": "10.5281/zenodo.19505773",
+   "url": "https://zenodo.org/records/19505774",
+   "title": "OSIRIS-CLI v5.0.0: Sovereign Quantum Discovery Framework",
+   "date": "2026-04-11",
+   "resource_type": "Software",
+   "version": "5.0.0",
+   "files": [
+    "osiris-cli-v5.0.0-20260411.tar.gz"
+   ],
+   "size_bytes": 360020278,
+   "cluster": "release",
+   "status": "software",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "OSIRIS-CLI v5.0.0 tarball (360 MB, md5 c9a32777…). Local copy verified at ~/osiris-crypto/Download/. NOTE: pyproject.toml in this tree says 4.0.0 and git tag is v4.1.0-sovereign — version labels disagree.",
+   "local_archive": "zenodo_archive/19505774/"
+  },
+  {
+   "zenodo_id": 19505903,
+   "doi": "10.5281/zenodo.19505903",
+   "concept_doi": "10.5281/zenodo.19505902",
+   "url": "https://zenodo.org/records/19505903",
+   "title": "Coaxial Resonance State Manifold: A Computational Framework for Vacuum Energy Anomalies in Tetrahedral Dielectric Micro-Lattices",
+   "date": "2026-04-11",
+   "resource_type": "Preprint",
+   "version": "5.0.0",
+   "files": [
+    "crsm_nature_physics_2026.tex"
+   ],
+   "size_bytes": 22280,
+   "cluster": "release",
+   "status": "preprint",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "CRSM vacuum-energy framework (Nature Physics format).",
+   "local_archive": "zenodo_archive/19505903/"
+  },
+  {
+   "zenodo_id": 19505907,
+   "doi": "10.5281/zenodo.19505907",
+   "concept_doi": "10.5281/zenodo.19505906",
+   "url": "https://zenodo.org/records/19505907",
+   "title": "CRSM Entropy Suppression in Tetrahedral Quantum Circuits: A Physical Review Letters Submission",
+   "date": "2026-04-11",
+   "resource_type": "Preprint",
+   "version": "5.0.0",
+   "files": [
+    "crsm_prl_2026.tex"
+   ],
+   "size_bytes": 11991,
+   "cluster": "release",
+   "status": "preprint",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "CRSM entropy suppression in 1,430 IBM circuits (PRL format). Entropy-suppression claims need re-examination in light of the 19656600 sampling artifact.",
+   "local_archive": "zenodo_archive/19505907/"
+  },
+  {
+   "zenodo_id": 19505911,
+   "doi": "10.5281/zenodo.19505911",
+   "concept_doi": "10.5281/zenodo.19505910",
+   "url": "https://zenodo.org/records/19505911",
+   "title": "NCLLM-Sovereign: A CRSM-Regularized Neural Network with Negentropic Efficiency Xi=177.3%",
+   "date": "2026-04-11",
+   "resource_type": "Preprint",
+   "version": "5.0.0",
+   "files": [
+    "ncllm_paper.tex",
+    "references.bib",
+    "benchmark_results.json"
+   ],
+   "size_bytes": 14043,
+   "cluster": "release",
+   "status": "preprint",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "NCLLM-Sovereign 132,736-param model; Ξ=177.3%.",
+   "local_archive": "zenodo_archive/19505911/"
+  },
+  {
+   "zenodo_id": 19505919,
+   "doi": "10.5281/zenodo.19505919",
+   "concept_doi": "10.5281/zenodo.19505918",
+   "url": "https://zenodo.org/records/19505919",
+   "title": "Quantum Independence Framework: Vendor-Neutral Quantum Information Metrics via 8-Qubit Phase-Conjugate Registers",
+   "date": "2026-04-11",
+   "resource_type": "Preprint",
+   "version": "5.0.0",
+   "files": [
+    "references.bib",
+    "qif_qbyte_paper.tex"
+   ],
+   "size_bytes": 20780,
+   "cluster": "release",
+   "status": "preprint",
+   "flywheel_tracks": [
+    "T3"
+   ],
+   "supersedes": [],
+   "note": "QIF vendor-neutral metrics via 8-qubit qByte with phase-conjugate mitigation (χ_PC=0.869).",
+   "local_archive": "zenodo_archive/19505919/"
+  },
+  {
+   "zenodo_id": 19505923,
+   "doi": "10.5281/zenodo.19505923",
+   "concept_doi": "10.5281/zenodo.19505922",
+   "url": "https://zenodo.org/records/19505923",
+   "title": "Toroidal Field Convergence and Lindblad-Integrated Quantum Synchronization: The Scimitar-SSE Protocol",
+   "date": "2026-04-11",
+   "resource_type": "Preprint",
+   "version": "5.0.0",
+   "files": [
+    "scimitar_sse_paper.tex",
+    "references.bib"
+   ],
+   "size_bytes": 18364,
+   "cluster": "release",
+   "status": "preprint",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "Scimitar-SSE toroidal/Lindblad synchronization.",
+   "local_archive": "zenodo_archive/19505923/"
+  },
+  {
+   "zenodo_id": 19505929,
+   "doi": "10.5281/zenodo.19505929",
+   "concept_doi": "10.5281/zenodo.19505928",
+   "url": "https://zenodo.org/records/19505929",
+   "title": "The 11-Dimensional Conformal Ricci-Flow Stability Metric: A Computational Framework for Quantum-Biological Information Synthesis",
+   "date": "2026-04-11",
+   "resource_type": "Preprint",
+   "version": "5.0.0",
+   "files": [
+    "unified_field_paper.tex",
+    "references.bib"
+   ],
+   "size_bytes": 24251,
+   "cluster": "release",
+   "status": "preprint",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "11D conformal Ricci-flow stability metric.",
+   "local_archive": "zenodo_archive/19505929/"
+  },
+  {
+   "zenodo_id": 19656600,
+   "doi": "10.5281/zenodo.19656600",
+   "concept_doi": "10.5281/zenodo.19656560",
+   "url": "https://zenodo.org/records/19656600",
+   "title": "Sovereign Quantum Manifold Stabilization: 136-bit Negentropy Gap on 156-Qubit Heron Substrate",
+   "date": "2026-04-19",
+   "resource_type": "Dataset",
+   "version": "4.1",
+   "files": [
+    "job-d7im8e7b91ec73b00pq0 (1).zip"
+   ],
+   "size_bytes": 19848178,
+   "cluster": "hardware",
+   "status": "artifact-confirmed",
+   "flywheel_tracks": [
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "156-qubit ibm_kingston, 1M shots (job d7im8e7b91ec73b00pq0). RE-ANALYSIS 2026-09-20: all 10⁶ shots are unique bitstrings → joint sample entropy = log₂(10⁶) = 19.9316 bits exactly; per-qubit marginals sum to 149.7/156 bits (near maximally mixed). The \"136-bit negentropy gap\" is 156 − log₂(shots), a finite-sample estimator artifact, not manifold collapse. ERRATUM FILED 2026-09-20 (metadata edit, live).",
+   "local_archive": "zenodo_archive/19656600/"
+  },
+  {
+   "zenodo_id": 19688735,
+   "doi": "10.5281/zenodo.19688735",
+   "concept_doi": "10.5281/zenodo.19688734",
+   "url": "https://zenodo.org/records/19688735",
+   "title": "🏛️ The Nobel Brief: 11D-CRSM Metric Collapse",
+   "date": "2026-04-22",
+   "resource_type": "Dataset",
+   "version": "4.1",
+   "files": [
+    "osiris-cli-v3.0.0.tar.gz"
+   ],
+   "size_bytes": 94157,
+   "cluster": "release",
+   "status": "narrative",
+   "flywheel_tracks": [],
+   "supersedes": [],
+   "note": "\"Nobel Brief\" narrative; ships osiris-cli-v3.0.0.tar.gz. Not a data record.",
+   "local_archive": "zenodo_archive/19688735/"
+  },
+  {
+   "zenodo_id": 19864030,
+   "doi": "10.5281/zenodo.19864030",
+   "concept_doi": "10.5281/zenodo.19864029",
+   "url": "https://zenodo.org/records/19864030",
+   "title": "Distributional Robustness of Parameterized Quantum Circuits: A Wasserstein-2 Study on NISQ Hardware",
+   "date": "2026-04-28",
+   "resource_type": "Preprint",
+   "version": null,
+   "files": [
+    "w2_robustness_paper.tex",
+    "coaxial_t1_experiment.py"
+   ],
+   "size_bytes": 35513,
+   "cluster": "hardware",
+   "status": "hardware-mixed",
+   "flywheel_tracks": [
+    "T1",
+    "T2"
+   ],
+   "supersedes": [],
+   "note": "W₂ distributional-robustness metric for PQCs on 27-qubit subset of ibm_fez. Central φ² hypothesis FALSIFIED (lower angle 28% more robust); entropy–robustness anticorrelation observed. Methodologically the cleanest paper in the set.",
+   "local_archive": "zenodo_archive/19864030/"
+  },
+  {
+   "zenodo_id": 22855102,
+   "doi": "10.5281/zenodo.22855102",
+   "concept_doi": "10.5281/zenodo.22855101",
+   "url": "https://zenodo.org/records/22855102",
+   "title": "Controlled Hardware Tests on ibm_fez (September 2026): Null Result for the Tetrahedral RZ Correction, and ZZ-Aware Staggered Dynamical Decoupling with Genetic-Algorithm Evolution",
+   "date": "2026-09-20",
+   "resource_type": "Dataset",
+   "version": "1.0.0",
+   "files": [
+    "ibm_fez_controlled_tests_2026-09-20.zip"
+   ],
+   "size_bytes": 1131964,
+   "cluster": "hardware",
+   "status": "hardware-mixed",
+   "flywheel_tracks": [
+    "T2",
+    "T3"
+   ],
+   "supersedes": [],
+   "note": "Four ibm_fez jobs, 227 s QPU. Tetrahedral RZ correction: null (ΔF=+0.002±0.006 at N=12 vs claimed +0.053; job dannuhgpqrnc73991ntg). Staggered XY4x2 DD: 0.946/0.888/0.795 at 8/16/32 µs, 3-way reproduced; GA matched but did not beat it (jobs dano3qtr…, dano4gop…, dano5dtr…). Refutes 18450507's README claim.",
+   "local_archive": "experiments/"
+  }
+ ],
+ "zenodo_accounts": {
+  "1485674": "42 records, 2025-12-08 → 2026-02-26 (token not on this machine)",
+  "1593545": "18+1 records, 2026-03-01 → present (token at ~/.osiris/zenodo.env)"
+ }
+}

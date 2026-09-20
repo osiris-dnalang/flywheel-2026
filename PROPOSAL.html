@@ -1,0 +1,191 @@
+<!doctype html><meta charset='utf-8'><title>PROPOSAL</title><style>body{max-width:52em;margin:2em auto;padding:0 1em;font:16px/1.5 Georgia,serif;color:#111}
+h1{font-size:1.6em;line-height:1.25}h2{margin-top:2em;border-bottom:1px solid #ccc}
+table{border-collapse:collapse;font-size:.92em}td,th{border:1px solid #bbb;padding:.3em .6em;vertical-align:top}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.9em}a{color:#0645ad}</style><h1>Pre-registered adversarial replication on NISQ hardware: closing the K₈ τ-sweep, stress-testing entropy-suppression claims, and testing an auditable evolutionary controller against real calibration drift</h1>
+<p><strong>BlueQubit Quantum Flywheel — Open Call 2026</strong>
+<strong>Primary track:</strong> 2 — Breaking quantum advantage claims. <strong>Hardware component:</strong> Track 1 (IBM QPU). <strong>Seed component:</strong> Track 3-adjacent (AI for error <em>suppression</em>: evolutionary dynamical-decoupling search; not QEC codes — stated plainly).
+<strong>Applicant:</strong> Devin Phillip Davis, independent researcher (Agile Defense Systems LLC), osiris.dnalang@gmail.com
+<strong>Code and data:</strong> github.com/osiris-dnalang — <code>dnalang-core</code>, <code>organism_sim</code>, <code>bridge</code> (Apache-2.0); snapshot DOI <a href="https://doi.org/10.5281/zenodo.22862567">10.5281/zenodo.22862567</a>
+<strong>Program term requested:</strong> 3 months. <strong>Resources requested:</strong> IBM Heron QPU time (~75 min total, itemised in §5), AWS CPU (16–32 cores), modest GPU, AI tokens (offline use only, §5).</p>
+<hr />
+<h2>1. Executive summary</h2>
+<p>Between December 2025 and April 2026 I published, under my own name, a series of NISQ &quot;advantage-flavoured&quot; claims on Zenodo: a Bell-fidelity revival at τ₀ = φ⁸ ≈ 47 µs (the &quot;K₈&quot; effect), a 10⁶× error-suppression factor, a 136-bit &quot;negentropy gap&quot; on 156 qubits, and a family of numerological constants (θ_lock = 51.843°, a φ⁸ ZZ period). In February 2026 I ran an informal single-backend version of my own pre-registered test and refuted four of those claims on <code>ibm_fez</code> (record <a href="https://zenodo.org/records/18781261">18781261</a>). In September 2026 I audited all 60 records, traced every headline claim to a specific artifact (plug-in entropy on 10⁶ shots; a τ-phase that was <code>unix_timestamp mod 46 µs</code>; a &quot;correction&quot; pass invisible in the measurement basis), filed errata (<a href="https://zenodo.org/records/19656600">19656600</a>), refuted the last live physics claim on hardware (ΔF = +0.002 ± 0.006 vs the claimed +0.053, job <code>dannuhgpqrnc73991ntg</code>, dataset <a href="https://zenodo.org/records/22855102">22855102</a>), and rebuilt the software from scratch with no constants and no claims (<a href="https://doi.org/10.5281/zenodo.22862567">22862567</a>).</p>
+<p>One item is unfinished: <strong>the K₈ pre-registration (<a href="https://zenodo.org/records/17918774">17918774</a>, SHA-256 <code>12df8918…c143b5c</code>, uploaded 2025-12-13) has never been executed as written.</strong> It specifies a coarse + fine τ grid, 8192/16384 shots, 3/5 repeats, ≥ 2 of 3 backends, 5σ discovery / 3σ evidence thresholds, and binding decision rules. Its named backends (<code>ibm_brisbane</code>, <code>ibm_kyoto</code>, <code>ibm_osaka</code>) are retired. The informal February run predicts a null. <strong>Aim 1 executes the protocol exactly as pre-registered on current Heron backends, under a pre-declared amendment for the backend substitution, and publishes the outcome whichever way it falls.</strong> A pre-registered 5σ-powered null closing a public claim is a citable result; a positive would be far more interesting and would be reported with the same procedure.</p>
+<p><strong>Aim 2</strong> applies adversarial classical analysis (Track 2's own methods) to my two largest datasets — the 156-qubit / 10⁶-shot &quot;negentropy gap&quot; (<a href="https://zenodo.org/records/19656600">19656600</a>) and the 1,430-circuit &quot;entropy suppression&quot; set (<a href="https://zenodo.org/records/19505907">19505907</a>) — with coverage-adjusted entropy estimators (Miller–Madow, NSB, Chao–Shen) and Clifford / tensor-network simulation of the &quot;torsion-lock&quot; circuits, to establish quantitatively that the reported gaps are sampling artifacts reproducible without a quantum computer. Deliverable: a methods note, <em>How not to fool yourself with plug-in entropy on 10⁶ shots</em>, with notebooks that regenerate every figure.</p>
+<p><strong>Aim 3</strong> (seed) tests the one open question in the rebuilt stack that cannot be answered in simulation. <code>dnalang-core</code> is a genome language for evolvable programs with a GA over dynamical-decoupling sequences; on 2026-09-20 it matched — and did not beat — the textbook ZZ-aware staggered XY4×2 on an 8-qubit <code>ibm_fez</code> chain (0.946 / 0.888 / 0.795 survival at 8 / 16 / 32 µs, jobs <code>dano3qtr…</code>, <code>dano4gop…</code>, <code>dano5dtr…</code>). <code>organism_sim</code> is a deterministic rule-evolving controller whose only measured advantage, across six pre-registered experiments, is <em>local topological self-repair after a silent link failure</em> (30/30 seeds, half the latency of a centralized monitor, zero false alarms) — and which measurably adds nothing on concept drift or on simulated calibration drift. Aim 3 pre-registers the hardware version of that last test: evolutionary DD search with and without the controller's structural layer, against <strong>real</strong> calibration drift on Heron, judged by re-convergence time after <code>calibration_hash</code> changes. The criterion is written in §4 before any job is submitted. Whatever it shows becomes the seventh row of a public scorecard that currently reads two PASS, four FAIL.</p>
+<p><strong>Why this proposal fits the Flywheel.</strong> The program's reviewers, by its own design, break claims. This is a proposal from someone whose public record for the last seven months is breaking his own — with hash-verified pre-registration, hash-chained execution ledgers, JSON-Schema-validated provenance, CI guards, and negative results kept on disk and cited. The expected outputs are exactly the program's: preprints, open repositories, and reproducible benchmark data, produced to the same standard whether the answer is yes or no.</p>
+<h2>2. Background and honest prior record</h2>
+<table>
+<thead>
+<tr>
+<th>Record</th>
+<th>Date</th>
+<th>What it claimed</th>
+<th>Status now</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://zenodo.org/records/17918774">17918774</a></td>
+<td>2025-12-13</td>
+<td>Pre-registration of the K₈ τ-sweep (SHA-256 verified)</td>
+<td><strong>Never executed as specified</strong> — Aim 1</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/18209071">18209071</a></td>
+<td>2026-01-10</td>
+<td>10⁶× error suppression</td>
+<td>Self-refuted; headline number was placeholder JSON</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/18781261">18781261</a></td>
+<td>2026-02-26</td>
+<td>Informal τ-sweep and 9 other experiments</td>
+<td>Refutes K₈ revival (T1 artifact, R² = 0.976), φ⁸ ZZ period, θ_lock, the 10⁶× claim; also contains the real results (teleportation F = 0.773, GHZ-18)</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/19656600">19656600</a></td>
+<td>2026-04-19</td>
+<td>136-bit negentropy gap on 156 qubits</td>
+<td>Artifact: 156 − log₂(10⁶ shots); all 10⁶ shots unique; erratum filed 2026-09-20 — Aim 2</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/19505907">19505907</a></td>
+<td>2026-04-11</td>
+<td>Entropy suppression in 1,430 circuits</td>
+<td>Same estimator; Aim 2</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/19864030">19864030</a></td>
+<td>2026-04-28</td>
+<td>W₂ distributional-robustness metric</td>
+<td>Sound; reused as an objective in Aim 3</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/22855102">22855102</a></td>
+<td>2026-09-20</td>
+<td>Four <code>ibm_fez</code> jobs: tetrahedral-correction null, staggered DD</td>
+<td>Hardware, controlled, this month</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.22862567">22862567</a></td>
+<td>2026-09-20</td>
+<td>Rebuilt stack + six pre-registered results</td>
+<td>Snapshot cited throughout</td>
+</tr>
+</tbody>
+</table>
+<p>Full audit: <code>docs/HONEST_ASSESSMENT.md</code> and <code>docs/FLYWHEEL_ASSESSMENT.md</code> in the applicant's working tree (to be published with the proposal). Records marked <code>legal</code>, <code>duplicate-file</code>, <code>superseded</code>, <code>self-refuted</code> or <code>artifact-confirmed</code> in the machine-readable index <code>publications.json</code> are not cited as evidence anywhere in this proposal.</p>
+<h2>3. Aims, methods and pre-registered criteria</h2>
+<h3>Aim 1 — Execute the K₈ pre-registration as written (Track 2 via Track 1 hardware)</h3>
+<p><strong>Protocol (from record 17918774, unchanged):</strong> Bell-state preparation on a fixed qubit pair; idle τ; Bell-fidelity readout. Phase 1 coarse τ grid of 24 points over 0–100 µs (analysis window 20–80 µs) at 8192 shots × 3 repeats; Phase 2 fine grid ±10 µs around the Phase-1 extremum at 0.5 µs steps, 16384 shots × 5 repeats. Revival statistic: z = (F_peak − F_dip)/√(σ²_peak + σ²_dip). <strong>Decision rules (binding, verbatim):</strong> H1 confirmed iff |τ_r − 47| &lt; 5 µs, z ≥ 5.0 combined across backends, and the revival replicates on ≥ 2 of 3 backends; H0 iff monotonic decay on all backends, or |τ_r − 47| &gt; 10 µs, or fewer than 2 backends show a revival; 3.0 ≤ z &lt; 5.0 → extend shots/repeats as specified.</p>
+<p><strong>Pre-declared amendment (the only one):</strong> the named backends are retired; the run uses three current Heron backends (e.g. <code>ibm_fez</code>, <code>ibm_torino</code>, <code>ibm_marrakesh</code>), chosen and recorded in the ledger <em>before</em> the first job, with the qubit pair selected by the same criterion on each (highest T2 pair in the calibration snapshot). Every job's <code>calibration_hash</code> and circuit hash are written to the <code>dnalang</code> write-ahead ledger before submission; raw counts are published with the record.</p>
+<p><strong>Expected outcome and its value:</strong> the February informal run gives H0 (decay fits T1; no revival). A pre-registered, three-backend, 5σ-powered null closes a public claim with a citation; the community gets a worked example of a complete pre-registration → execution → publication cycle on a NISQ device, including a retired-backend amendment handled correctly.</p>
+<h3>Aim 2 — Adversarial classical re-analysis of the entropy-suppression datasets (Track 2)</h3>
+<p><strong>Data:</strong> the raw 10⁶-shot bitstrings from 19656600 (156 qubits, <code>ibm_kingston</code>) and the 1,430-circuit counts from 19505907 — already public.
+<strong>Methods:</strong> (i) recompute every reported entropy with plug-in, Miller–Madow, Chao–Shen and NSB estimators and report the coverage (fraction of observed mass in singletons; for 19656600 all 10⁶ shots are unique, so coverage ≈ 0); (ii) show the &quot;gap&quot; equals <code>n_qubits − log₂(shots)</code> analytically and numerically; (iii) reproduce the &quot;torsion-lock&quot; circuits (Clifford + RZ layers) classically — stabilizer simulation where Clifford, tensor-network (MPS/PEPS via BlueQubit's GPU simulator) where not — and show the measured marginals are reproduced without hardware; (iv) bootstrap confidence intervals throughout.
+<strong>Deliverable:</strong> methods note + notebooks that regenerate every figure from the public records; a PR to the two Zenodo records adding the re-analysis as a linked erratum.
+<strong>Criterion:</strong> the note is complete when every entropy figure in the two records has a coverage-adjusted counterpart and a classical reproduction with stated CI; no hardware is used.</p>
+<h3>Aim 3 — Evolutionary DD search against real calibration drift, with and without the controller layer (Track 3-adjacent seed)</h3>
+<p><strong>What exists.</strong> <code>dnalang-core</code>: genome language → circuit IR → Aer/IBM; GA over a DD space (K slots × {I, X, Y} per sublattice × offset) with parity screening; hash-chained ledger. <code>bridge</code>: an <code>organism_sim</code> LCS controller over that space whose fitness is measured under a physics-faithful simulated environment (quasi-static dephasing + static ZZ as exact unitaries, reproducing the <code>ibm_fez</code> ordering); joined provenance on <code>(genome_key, calibration_hash)</code>. Pre-registered simulation results already on disk: the controller ties the GA at equal budget (0.9763 vs 0.9758 verified survival, staggered XY4 0.9705); under a <em>simulated</em> calibration shock, the controller's structural layer fails to beat the plain controller (1/5 seeds), while both re-converge 2–3× faster than the population GA (11–14 vs 30–38 evaluations, exploratory).</p>
+<p><strong>Hardware protocol.</strong> Chain of 8 qubits on one Heron backend (the <code>ibm_fez</code> chain used on 2026-09-20 if available). Objective: mean |+⟩ survival at T ∈ {16, 32} µs, plus the W₂ robustness metric (19864030) as a secondary. Four arms, identical evaluation budgets, interleaved in the same jobs so they see the same drift: <code>ga-continued</code>, <code>ga-restarted</code>, <code>organism-plain</code>, <code>organism-structural</code>. Drift is <em>real</em>: arms run across calibration boundaries; every job records <code>calibration_hash</code>; a &quot;shock&quot; is a change of hash. Surrogate screening before every hardware child (the pipeline lesson from 2026-09-20).
+<strong>Pre-registered criterion (binding):</strong> C1 — <code>organism-structural</code> re-converges (post-shock best within 0.01 of the post-shock oracle, oracle = pooled best across arms with 2× budget) in fewer hardware evaluations than <strong>both</strong> <code>organism-plain</code> and <code>ga-continued</code> on ≥ 4 of 5 shocks; else the structural layer is declared redundant on hardware, as it was in simulation, and the result is published as such. C2 (secondary, exploratory): whether the controller family re-converges faster than the GA family, as in simulation. C3: all evolved winners must beat staggered XY4×2 on the same job to count at all.
+<strong>Deliverable:</strong> hardware ledgers, the seventh scorecard row, and a short report either way.</p>
+<h2>4. Methodology that applies to all three aims</h2>
+<ul>
+<li><strong>Pre-registration:</strong> criteria are written and committed (git + Zenodo) before the first job; tuning, where any, is confined to designated seeds/backends disjoint from evaluation; nothing is re-tuned on evaluation data; all outcomes are published.</li>
+<li><strong>Provenance:</strong> every hardware job is preceded by a ledger row (circuit hash, <code>calibration_hash</code>, layout, shots); every controller decision is a hash-chained telemetry row; both rows validate against public JSON Schemas and join on <code>(genome_key, calibration_hash)</code>.</li>
+<li><strong>Reproducibility:</strong> seeded, deterministic simulation; CI guards with a latency budget and a regression benchmark on every push; raw counts published with each record under CC-BY; code under Apache-2.0.</li>
+<li><strong>AI use:</strong> frontier assistants are used <em>outside</em> the execution loop only — for code review and for drafting from a deterministic scaffold that injects commit hashes, the scorecard and the constraints (<code>organism_sim.cli ask &quot;scaffold: …&quot;</code>). No model is in any control or analysis path; every number in every report is regenerated by a script.</li>
+</ul>
+<h2>5. Resources requested and how they are used</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Aim</th>
+<th>Estimate</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Heron QPU</td>
+<td>1</td>
+<td>3 backends × (coarse 24 τ × 3 rep × 8192 + fine 41 τ × 5 rep × 16384) = 3 × 3.95 M shots ≈ <strong>3 × 20 min</strong></td>
+<td>2026-09-20 jobs: 26 QPU-s for 84 × 1024-shot circuits ≈ 0.31 s per 1024 shots incl. overhead</td>
+</tr>
+<tr>
+<td>IBM Heron QPU</td>
+<td>3</td>
+<td>5 shocks × 4 arms × ~30 evaluations × 2 T × 1024 shots ≈ 1.2 M shots ≈ <strong>7 min</strong>, plus baselines ≈ 2 min</td>
+<td>same</td>
+</tr>
+<tr>
+<td>AWS CPU (16–32 cores)</td>
+<td>2, 3</td>
+<td>~200 core-hours</td>
+<td>estimator bootstraps; Aer surrogate screening (0.05 s/eval)</td>
+</tr>
+<tr>
+<td>AWS / BlueQubit GPU</td>
+<td>2</td>
+<td>~40 GPU-hours</td>
+<td>MPS/PEPS reproduction of 156-qubit circuits</td>
+</tr>
+<tr>
+<td>AI tokens</td>
+<td>all</td>
+<td>small</td>
+<td>offline drafting/review only</td>
+</tr>
+</tbody>
+</table>
+<p>Total QPU request ≈ 70–75 minutes across the term — small by design; the value is in the protocol, not the volume.</p>
+<h2>6. Timeline (3 months)</h2>
+<table>
+<thead>
+<tr>
+<th>Weeks</th>
+<th>Work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td>Commit Aim-1 backend amendment and Aim-3 criteria (this document + <code>PREREGISTRATION.md</code>, Zenodo-versioned); Aim-2 estimator notebooks on the public data; surrogate calibration for Aim 3</td>
+</tr>
+<tr>
+<td>3–5</td>
+<td>Aim 1 coarse phase on three backends; Aim 2 classical reproductions on GPU</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Aim 1 fine phase; Aim 3 hardware runs across ≥ 5 calibration boundaries</td>
+</tr>
+<tr>
+<td>9–10</td>
+<td>Analysis strictly per the pre-registered rules; methods note draft</td>
+</tr>
+<tr>
+<td>11–12</td>
+<td>Preprint(s), Zenodo records with raw data, repository releases, scorecard update; errata cross-links on 19656600 / 19505907</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Deliverables</h2>
+<ol>
+<li><strong>Preprint:</strong> <em>Closing a pre-registered NISQ claim: the K₈ τ-sweep executed as written</em> (result either way) — with raw counts.</li>
+<li><strong>Methods note + notebooks:</strong> <em>How not to fool yourself with plug-in entropy on 10⁶ shots</em> — linked as errata to the two source records.</li>
+<li><strong>Report + ledgers:</strong> evolutionary DD under real calibration drift, four arms, pre-registered verdict; <code>bridge</code> release.</li>
+<li><strong>Repositories</strong> (already public, Apache-2.0): <code>dnalang-core</code>, <code>organism_sim</code>, <code>bridge</code> — tagged releases at each milestone; <strong>benchmark data</strong> (CC-BY) on Zenodo under the existing concept DOI 10.5281/zenodo.22862566.</li>
+</ol>
+<h2>8. Risks</h2>
+<ul>
+<li><em>Backend availability / queue:</em> three-backend replication may degrade to two — already the pre-registered minimum. Layouts and hashes are logged so any substitution is visible.</li>
+<li><em>Drift too slow for Aim 3 in the window:</em> fewer than five calibration boundaries → report the shocks observed and state that C1 could not be evaluated at the pre-registered power; do not lower the bar.</li>
+<li><em>Single investigator:</em> mitigated by the fact that every step is scripted, hash-chained and public; a reviewer can re-run any figure.</li>
+<li><em>Outcome risk:</em> none — nulls are deliverables here.</li>
+</ul>
+<h2>9. Team</h2>
+<p>Devin Phillip Davis — independent; ~300 IBM Quantum jobs since 2025; author of the records above including the self-refutations. No institutional overhead. Open to a BlueQubit- or IBM-side collaborator on Aim 2's tensor-network reproduction.</p>

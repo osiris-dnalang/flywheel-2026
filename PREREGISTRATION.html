@@ -1,0 +1,49 @@
+<!doctype html><meta charset='utf-8'><title>PREREGISTRATION</title><style>body{max-width:52em;margin:2em auto;padding:0 1em;font:16px/1.5 Georgia,serif;color:#111}
+h1{font-size:1.6em;line-height:1.25}h2{margin-top:2em;border-bottom:1px solid #ccc}
+table{border-collapse:collapse;font-size:.92em}td,th{border:1px solid #bbb;padding:.3em .6em;vertical-align:top}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.9em}a{color:#0645ad}</style><h1>Pre-registration — Flywheel 2026 proposal, Aims 1 and 3</h1>
+<p>This file is committed and Zenodo-versioned before any hardware job is submitted. Changes after
+that point are amendments and must be listed in §Amendments with a date and reason.</p>
+<h2>Aim 1 — K₈ τ-sweep</h2>
+<p><strong>Source protocol:</strong> Zenodo record 17918774, file <code>k8_preregistration.py</code>,
+SHA-256 <code>12df8918eaa88ec02cde1cf51b32a1568e9878aff2fbd34ee168a3665c143b5c</code>. All grid, shot,
+repeat, statistic and decision-rule parameters are taken from that file unchanged.</p>
+<p><strong>Amendment A1 (pre-declared, before first job):</strong> <code>BACKENDS_REQUIRED = [&quot;ibm_brisbane&quot;, &quot;ibm_kyoto&quot;, &quot;ibm_osaka&quot;]</code> are retired. Substitute three currently available IBM Heron backends,
+named here at the time of the first job: ______ , ______ , ______ (to be filled and committed in
+the same commit as the first ledger row). <code>MIN_BACKENDS_FOR_ACCEPTANCE = 2</code> is unchanged.</p>
+<p><strong>Qubit-pair selection rule (pre-declared):</strong> on each backend, the connected pair with the
+highest min(T2) in the calibration snapshot at submission time; recorded with <code>calibration_hash</code>.</p>
+<p><strong>Decision rules:</strong> exactly the <code>DECISION_RULES</code> block of the source file. The analysis script
+is <code>k8_preregistration.py</code>'s algorithm re-implemented in <code>dnalang</code> with a test that reproduces
+the source's revival statistic on synthetic data before any hardware counts are analysed.</p>
+<p><strong>Publication commitment:</strong> raw counts, ledger, and verdict (H1 / H0 / extend) are published
+as a Zenodo dataset and a preprint regardless of outcome.</p>
+<h2>Aim 3 — DD search under real calibration drift, four arms</h2>
+<p><strong>Backend / chain:</strong> one Heron backend; the 8-qubit chain used on 2026-09-20 if available
+(<code>ibm_fez</code> [89, 90, 91, 98, 111, 110, 109, 118]); otherwise a chain chosen by the same rule
+(linear, highest min T2) and recorded before the first job.</p>
+<p><strong>Objective:</strong> mean P(+) after idle T ∈ {16, 32} µs (as in dataset 22855102); secondary W₂
+robustness (record 19864030).</p>
+<p><strong>Arms (interleaved in the same jobs):</strong> <code>ga-continued</code>, <code>ga-restarted</code>, <code>organism-plain</code>,
+<code>organism-structural</code> — as implemented in <code>bridge/drift_bench.py</code> at the commit named in the
+first ledger row. Equal hardware-evaluation budgets. Every child is surrogate-screened
+(Aer, <code>bridge.noise</code>) before submission.</p>
+<p><strong>Shock definition:</strong> a change in the backend <code>calibration_hash</code> between consecutive jobs.</p>
+<p><strong>Oracle and target:</strong> post-shock oracle = best verified survival across all arms with 2× the
+per-arm budget under the new hash; target = oracle − 0.01.</p>
+<p><strong>Criteria (binding):</strong></p>
+<ul>
+<li>C1: <code>organism-structural</code> reaches the target in fewer hardware evaluations than <strong>both</strong>
+<code>organism-plain</code> and <code>ga-continued</code> on ≥ 4 of 5 shocks → the structural layer helps on
+hardware. Otherwise it is declared redundant on hardware (matching the simulation result).</li>
+<li>C2 (exploratory, reported not judged): controller-family vs GA-family re-convergence.</li>
+<li>C3 (gate): any evolved winner must beat staggered XY4×2 in the same job to be reported as a
+winner at all.</li>
+<li>Power: if fewer than 5 calibration boundaries occur in the program term, the result is
+reported as underpowered; the bar is not lowered.</li>
+</ul>
+<p><strong>Tuning discipline:</strong> controller triggers are fixed to the values selected on simulation
+tuning seeds 100–104 (<code>bridge/results/tier4/tier4_tuning_seeds100-104.json</code>). Nothing is
+re-tuned on hardware data.</p>
+<h2>Amendments</h2>
+<p>(none yet)</p>
