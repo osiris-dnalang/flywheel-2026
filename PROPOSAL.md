@@ -3,6 +3,7 @@
 **BlueQubit Quantum Flywheel — Open Call 2026**
 **Primary track:** 2 — Breaking quantum advantage claims. **Hardware component:** Track 1 (IBM QPU). **Seed component:** Track 3-adjacent (AI for error *suppression*: evolutionary dynamical-decoupling search; not QEC codes — stated plainly).
 **Applicant:** Devin Phillip Davis, independent researcher (Agile Defense Systems LLC), osiris.dnalang@gmail.com
+**This proposal:** DOI [10.5281/zenodo.22863245](https://doi.org/10.5281/zenodo.22863245) · github.com/osiris-dnalang/flywheel-2026 (release v1.0.0)
 **Code and data:** github.com/osiris-dnalang — `dnalang-core`, `organism_sim`, `bridge` (Apache-2.0); snapshot DOI [10.5281/zenodo.22862567](https://doi.org/10.5281/zenodo.22862567)
 **Program term requested:** 3 months. **Resources requested:** IBM Heron QPU time (~75 min total, itemised in §5), AWS CPU (16–32 cores), modest GPU, AI tokens (offline use only, §5).
 

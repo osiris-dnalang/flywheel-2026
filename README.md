@@ -1,5 +1,7 @@
 # Flywheel 2026 — proposal package
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22863245.svg)](https://doi.org/10.5281/zenodo.22863245)
+
 Submission package for the BlueQubit Quantum Flywheel open call (2026).
 
 - `PROPOSAL.md` — the proposal (Track 2 with a Track-1 hardware component and a Track-3-adjacent seed)

@@ -32,7 +32,7 @@ hash-chained ledger rows; all outcomes are published. Requested: ≈ 75 min Hero
 AWS CPU/GPU, offline AI use only.
 
 **Links:** github.com/osiris-dnalang/{dnalang-core, organism_sim, bridge} ·
-DOI 10.5281/zenodo.22862567 · proposal repository: github.com/osiris-dnalang/flywheel-2026
+code DOI 10.5281/zenodo.22862567 · proposal DOI 10.5281/zenodo.22863245 · github.com/osiris-dnalang/flywheel-2026
 
 **Compute needs:** IBM Heron QPU ≈ 75 min total (itemised in PROPOSAL.md §5); AWS 16–32-core
 CPU ≈ 200 core-h; GPU ≈ 40 h for 156-qubit MPS/PEPS reproduction; AI tokens: small, offline.
