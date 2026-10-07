@@ -9,8 +9,8 @@ that point are amendments and must be listed in §Amendments with a date and rea
 SHA-256 <code>12df8918eaa88ec02cde1cf51b32a1568e9878aff2fbd34ee168a3665c143b5c</code>. All grid, shot,
 repeat, statistic and decision-rule parameters are taken from that file unchanged.</p>
 <p><strong>Amendment A1 (pre-declared, before first job):</strong> <code>BACKENDS_REQUIRED = [&quot;ibm_brisbane&quot;, &quot;ibm_kyoto&quot;, &quot;ibm_osaka&quot;]</code> are retired. Substitute three currently available IBM Heron backends,
-named here at the time of the first job: ______ , ______ , ______ (to be filled and committed in
-the same commit as the first ledger row). <code>MIN_BACKENDS_FOR_ACCEPTANCE = 2</code> is unchanged.</p>
+selected by the rule in Amendment A2 (no discretion; the resulting names are recorded in the same
+commit as the first ledger row). <code>MIN_BACKENDS_FOR_ACCEPTANCE = 2</code> is unchanged.</p>
 <p><strong>Qubit-pair selection rule (pre-declared):</strong> on each backend, the connected pair with the
 highest min(T2) in the calibration snapshot at submission time; recorded with <code>calibration_hash</code>.</p>
 <p><strong>Decision rules:</strong> exactly the <code>DECISION_RULES</code> block of the source file. The analysis script
@@ -29,8 +29,10 @@ robustness (record 19864030).</p>
 first ledger row. Equal hardware-evaluation budgets. Every child is surrogate-screened
 (Aer, <code>bridge.noise</code>) before submission.</p>
 <p><strong>Shock definition:</strong> a change in the backend <code>calibration_hash</code> between consecutive jobs.</p>
-<p><strong>Oracle and target:</strong> post-shock oracle = best verified survival across all arms with 2× the
-per-arm budget under the new hash; target = oracle − 0.01.</p>
+<p><strong>Oracle and target (as amended by A3):</strong> post-shock oracle = best verified survival found by a
+dedicated reference search (<code>oracle-ref</code>, a <code>ga-restarted</code> run at 2× the per-arm budget under the
+new hash) that is not one of the four compared arms and whose result alone defines the oracle;
+target = oracle − 0.01.</p>
 <p><strong>Criteria (binding):</strong></p>
 <ul>
 <li>C1: <code>organism-structural</code> reaches the target in fewer hardware evaluations than <strong>both</strong>
@@ -38,7 +40,9 @@ per-arm budget under the new hash; target = oracle − 0.01.</p>
 hardware. Otherwise it is declared redundant on hardware (matching the simulation result).</li>
 <li>C2 (exploratory, reported not judged): controller-family vs GA-family re-convergence.</li>
 <li>C3 (gate): any evolved winner must beat staggered XY4×2 in the same job to be reported as a
-winner at all.</li>
+winner at all. Any reported winner carries its difference from staggered XY4×2 with a 95%
+confidence interval, the number of candidates searched, and the statement that it was selected
+by search on this device under this drift (A6).</li>
 <li>Power: if fewer than 5 calibration boundaries occur in the program term, the result is
 reported as underpowered; the bar is not lowered.</li>
 </ul>
@@ -46,4 +50,28 @@ reported as underpowered; the bar is not lowered.</li>
 tuning seeds 100–104 (<code>bridge/results/tier4/tier4_tuning_seeds100-104.json</code>). Nothing is
 re-tuned on hardware data.</p>
 <h2>Amendments</h2>
-<p>(none yet)</p>
+<p><strong>v1.1 — 2026-10-07 — before any Aim 1 or Aim 3 hardware job is submitted</strong> (no such job has been
+submitted as of this date). Made after an adversarial review of v1.0.0. None of these changes
+alters the Aim 1 <code>DECISION_RULES</code> block, a threshold or a grid.</p>
+<ul>
+<li><strong>A2 (Aim 1, backend selection).</strong> The three backends are the first three, in ascending
+alphabetical order of backend name, of the IBM Heron-family backends reported operational by the
+provider on the UTC date of the first-job commit, excluding any backend that cannot supply the
+connected qubit pair the pair rule needs. The list, its source query and its timestamp are
+written to the ledger before the first job. Reason: v1.0.0 left the names blank, which allowed a
+data-dependent choice.</li>
+<li><strong>A3 (Aim 3, oracle).</strong> The post-shock oracle comes from a dedicated reference search
+(<code>oracle-ref</code>) instead of the pooled best of the compared arms. Reason: a target defined by the
+arms being judged moves with their own results. Cost: one extra 2×-budget search per shock
+(about +3.5 QPU-minutes; Proposal §5 updated).</li>
+<li><strong>A4 (Aim 3, power statement; C1 unchanged).</strong> C1 remains binding as written. With five shocks
+and three exchangeable arms, the chance of &quot;strictly fewest evaluations on ≥ 4 of 5&quot; is
+11/243 ≈ 0.045 under the null that the arms do not differ; one fewer success is not
+distinguishable from chance. The report states the per-shock outcomes and an exact
+(Clopper–Pearson) interval for the success rate, and describes the experiment as a pilot.</li>
+<li><strong>A5 (Aim 1, additional reporting).</strong> Alongside the source protocol's z-statistic, the report
+gives a p-value from a permutation test under the null of monotonic decay that re-runs the whole
+extremum search, so the look-elsewhere effect of picking the peak from the coarse grid is
+accounted for. Reporting only; no decision rule uses it.</li>
+<li><strong>A6 (Aim 3, reporting of search winners).</strong> See C3 above.</li>
+</ul>

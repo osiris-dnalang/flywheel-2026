@@ -8,7 +8,7 @@ Submission package for the BlueQubit Quantum Flywheel open call (2026).
 - `PREREGISTRATION.md` — binding criteria for the hardware aims, committed before any job
 - `FORM_ANSWERS.md` — prepared answers for the application form
 - `PROPOSAL.html` — rendered copy for upload (`python build.py`)
-- `experiments/osiris_advantage_marrakesh/` — Pre-registered hardware demonstration on IBM Heron r2 (`ibm_marrakesh`): bipartite-staggered DD achieves **+30.5%** coherence retention over bare idle ($P(+) = 0.8998$ vs $0.5945$) and **+6.5%** over textbook simultaneous DD ($0.8998$ vs $0.8342$) at $T = 32\ \mu\text{s}$ across an 8-qubit chain under real spectator $ZZ$ crosstalk.
+- `experiments/osiris_advantage_marrakesh/` — Pre-registered dynamical-decoupling (DD) hardware run on IBM Heron r2 (`ibm_marrakesh`), one job, one 8-qubit chain: bipartite-staggered DD retains $P(+) = 0.8998$ at $T = 32\ \mu\text{s}$ against $0.8342$ for textbook simultaneous DD (+6.5 percentage points) under real spectator $ZZ$ crosstalk. Textbook DD itself recovers most of the gap to bare idle ($0.5945$), so the comparison that matters is the +6.5. This is a coherence-retention result, not a quantum-advantage claim; the directory and file names keep the original wording because renaming would break the hash-anchored record.
 
 Companion code, hardware datasets, and publications:
 - [dnalang-core](https://github.com/osiris-dnalang/dnalang-core) · [organism_sim](https://github.com/osiris-dnalang/organism_sim) · [bridge](https://github.com/osiris-dnalang/bridge)

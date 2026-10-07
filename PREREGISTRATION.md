@@ -11,8 +11,8 @@ repeat, statistic and decision-rule parameters are taken from that file unchange
 
 **Amendment A1 (pre-declared, before first job):** `BACKENDS_REQUIRED = ["ibm_brisbane",
 "ibm_kyoto", "ibm_osaka"]` are retired. Substitute three currently available IBM Heron backends,
-named here at the time of the first job: ______ , ______ , ______ (to be filled and committed in
-the same commit as the first ledger row). `MIN_BACKENDS_FOR_ACCEPTANCE = 2` is unchanged.
+selected by the rule in Amendment A2 (no discretion; the resulting names are recorded in the same
+commit as the first ledger row). `MIN_BACKENDS_FOR_ACCEPTANCE = 2` is unchanged.
 
 **Qubit-pair selection rule (pre-declared):** on each backend, the connected pair with the
 highest min(T2) in the calibration snapshot at submission time; recorded with `calibration_hash`.
@@ -40,8 +40,10 @@ first ledger row. Equal hardware-evaluation budgets. Every child is surrogate-sc
 
 **Shock definition:** a change in the backend `calibration_hash` between consecutive jobs.
 
-**Oracle and target:** post-shock oracle = best verified survival across all arms with 2× the
-per-arm budget under the new hash; target = oracle − 0.01.
+**Oracle and target (as amended by A3):** post-shock oracle = best verified survival found by a
+dedicated reference search (`oracle-ref`, a `ga-restarted` run at 2× the per-arm budget under the
+new hash) that is not one of the four compared arms and whose result alone defines the oracle;
+target = oracle − 0.01.
 
 **Criteria (binding):**
 - C1: `organism-structural` reaches the target in fewer hardware evaluations than **both**
@@ -49,7 +51,9 @@ per-arm budget under the new hash; target = oracle − 0.01.
   hardware. Otherwise it is declared redundant on hardware (matching the simulation result).
 - C2 (exploratory, reported not judged): controller-family vs GA-family re-convergence.
 - C3 (gate): any evolved winner must beat staggered XY4×2 in the same job to be reported as a
-  winner at all.
+  winner at all. Any reported winner carries its difference from staggered XY4×2 with a 95%
+  confidence interval, the number of candidates searched, and the statement that it was selected
+  by search on this device under this drift (A6).
 - Power: if fewer than 5 calibration boundaries occur in the program term, the result is
   reported as underpowered; the bar is not lowered.
 
@@ -59,4 +63,27 @@ re-tuned on hardware data.
 
 ## Amendments
 
-(none yet)
+**v1.1 — 2026-10-07 — before any Aim 1 or Aim 3 hardware job is submitted** (no such job has been
+submitted as of this date). Made after an adversarial review of v1.0.0. None of these changes
+alters the Aim 1 `DECISION_RULES` block, a threshold or a grid.
+
+- **A2 (Aim 1, backend selection).** The three backends are the first three, in ascending
+  alphabetical order of backend name, of the IBM Heron-family backends reported operational by the
+  provider on the UTC date of the first-job commit, excluding any backend that cannot supply the
+  connected qubit pair the pair rule needs. The list, its source query and its timestamp are
+  written to the ledger before the first job. Reason: v1.0.0 left the names blank, which allowed a
+  data-dependent choice.
+- **A3 (Aim 3, oracle).** The post-shock oracle comes from a dedicated reference search
+  (`oracle-ref`) instead of the pooled best of the compared arms. Reason: a target defined by the
+  arms being judged moves with their own results. Cost: one extra 2×-budget search per shock
+  (about +3.5 QPU-minutes; Proposal §5 updated).
+- **A4 (Aim 3, power statement; C1 unchanged).** C1 remains binding as written. With five shocks
+  and three exchangeable arms, the chance of "strictly fewest evaluations on ≥ 4 of 5" is
+  11/243 ≈ 0.045 under the null that the arms do not differ; one fewer success is not
+  distinguishable from chance. The report states the per-shock outcomes and an exact
+  (Clopper–Pearson) interval for the success rate, and describes the experiment as a pilot.
+- **A5 (Aim 1, additional reporting).** Alongside the source protocol's z-statistic, the report
+  gives a p-value from a permutation test under the null of monotonic decay that re-runs the whole
+  extremum search, so the look-elsewhere effect of picking the peak from the coarse grid is
+  accounted for. Reporting only; no decision rule uses it.
+- **A6 (Aim 3, reporting of search winners).** See C3 above.

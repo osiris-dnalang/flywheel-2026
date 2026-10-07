@@ -21,7 +21,8 @@ I have since refuted four of them on IBM hardware myself (Zenodo 18781261), trac
 specific sampling artifacts, filed errata, and rebuilt the software from scratch with no
 constants (10.5281/zenodo.22862567). One item remains: a hash-verified pre-registration of the
 decisive τ-sweep (17918774) that has never been executed as written. Aim 1 runs it exactly as
-pre-registered on three Heron backends under a single pre-declared backend amendment and
+pre-registered on three Heron backends under a single pre-declared backend amendment (with a
+corrected p-value reported alongside the protocol's z-statistic) and
 publishes the result either way (a 5σ-powered null closes a public claim). Aim 2 applies
 coverage-adjusted entropy estimators and tensor-network reproduction to my two largest datasets
 to show the reported gaps are classically reproducible. Aim 3 pre-registers a hardware test of

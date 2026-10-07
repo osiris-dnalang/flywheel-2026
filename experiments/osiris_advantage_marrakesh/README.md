@@ -1,4 +1,6 @@
-# OSIRIS Quantum Coherence Advantage Hardware Run — IBM Heron r2 (ibm_marrakesh)
+# OSIRIS Staggered-DD Coherence-Retention Hardware Run — IBM Heron r2 (ibm_marrakesh)
+
+> Naming note: this directory, its scripts and the Zenodo archive were named "advantage" before the Flywheel review. The result is a dynamical-decoupling coherence-retention comparison on one job and one chain. It is not a quantum-advantage claim. File names are unchanged so the hash-anchored record stays intact.
 
 **Job ID:** `dau0q3qhcrkc73durtgg`  
 **Backend:** `ibm_marrakesh` (156-qubit Heron r2)  
@@ -30,12 +32,12 @@ The experiment was pre-registered into an immutable write-ahead append-only ledg
 
 ## Pre-registered Hypothesis Evaluation
 
-1. **Advantage over Bare Idle (T = 32 µs):**
+1. **Gain over Bare Idle (T = 32 µs; includes the effect of any DD, textbook DD gives most of it):**
    - Bare idle survival (`none`): **0.5945**
    - OSIRIS best staggered (`xy8_stag`): **0.8998**
    - Observed Gain: **+0.3053** (Threshold: +0.1500) -> **MET**
 
-2. **Advantage over Textbook Simultaneous DD (T = 32 µs):**
+2. **Gain over Textbook Simultaneous DD (T = 32 µs; the comparison that matters):**
    - Standard simultaneous XY4x2 (`xy4x2`): **0.8342**
    - OSIRIS best staggered (`xy8_stag`): **0.8998**
    - Observed Gain: **+0.0656** (Threshold: +0.0200) -> **MET**
