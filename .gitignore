@@ -1,1 +1,6 @@
 __pycache__/
+
+# Credentials never enter git or archives (Gate 0)
+.env
+.env.*
+*.env
